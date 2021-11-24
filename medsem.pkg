@@ -1,0 +1,10 @@
+v 1.0.0
+d 'MEDSEM': Mediation analysis
+d 
+d Stata package for statistical mediation analysis
+d 
+d Distribution-Date:   20211124
+d License: MIT
+d 
+F medsem.ado
+F medsem.sthlp
