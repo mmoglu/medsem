@@ -81,7 +81,7 @@ KW: Sobel
 
 
 {title:Examples}
-{phang}{stata "use http://www.ats.ucla.edu/stat/data/hsbdemo, clear": . use http://www.ats.ucla.edu/stat/data/hsbdemo, clear}{p_end}
+{phang}{stata "use https://stats.idre.ucla.edu/stat/data/hsbdemo, clear": . use https://stats.idre.ucla.edu/stat/data/hsbdemo, clear, clear}{p_end}
 {phang}{stata . qui sem (read <- math)(science <- read math)}{p_end}
 {phang}{stata "medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid": . medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid}{p_end}
 
