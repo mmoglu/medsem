@@ -93,10 +93,10 @@ KW: Sobel
 {phang}{stata "webuse set https://github.com/mmoglu/medsem/raw/main": . webuse set https://github.com/mmoglu/medsem/raw/main}{p_end}
 {phang}{stata "webuse workout.dta, clear": . webuse PoliticalDemocracy.dta, clear}{p_end}
 {phang}{stata . qui sem (Attractive -> face sexy)(Appearance -> body appear attract)(Muscle -> muscle strength endur)(Weight -> lweight calories cweight)(Appearance <- Attractive age)(Muscle <- Appearance Attractive age)(Weight <- Appearance Attractive age)}{p_end}
-{phang}{stata ". medsem, indep(Attractive) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid": . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
-{phang}{stata ". medsem, indep(Attractive) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid": . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
-{phang}{stata ". medsem, indep(age) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid": . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
-{phang}{stata ". medsem, indep(age) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid": . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
+{phang}{stata ". medsem, indep(Attractive) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid": . medsem, indep(Attractive) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid}{p_end}
+{phang}{stata ". medsem, indep(Attractive) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid": . medsem, indep(Attractive) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid}{p_end}
+{phang}{stata ". medsem, indep(age) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid": . medsem, indep(age) med(Appearance) dep(Muscle) stand mcreps(5000) zlc rit rid}{p_end}
+{phang}{stata ". medsem, indep(age) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid": . medsem, indep(age) med(Appearance) dep(Weight) stand mcreps(5000) zlc rit rid}{p_end}
 
 {title:Author}
 Mehmet Mehmetoglu
