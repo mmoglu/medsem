@@ -86,7 +86,7 @@ KW: Sobel
 {phang}{stata "medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid": . medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid}{p_end}
 
 {phang}{stata "webuse set https://github.com/mmoglu/medsem/raw/main": . webuse set https://github.com/mmoglu/medsem/raw/main}{p_end}
-{phang}{stata "webuse PoliticalDemocracy.dta, clear": . webuse "PoliticalDemocracy.dta", clear}{p_end}
+{phang}{stata "webuse PoliticalDemocracy.dta, clear": . webuse PoliticalDemocracy.dta, clear}{p_end}
 {phang}{stata . qui sem (Ind60 -> x1-x3)(Dem60 -> y1-y4)(Dem65 -> y5-y8)(Dem60<-Ind60)(Dem65<-Dem60 Ind60)}{p_end}
 {phang}{stata ". medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid": . . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
 
