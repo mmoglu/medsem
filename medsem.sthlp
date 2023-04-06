@@ -85,19 +85,10 @@ KW: Sobel
 {phang}{stata . qui sem (read <- math)(science <- read math)}{p_end}
 {phang}{stata "medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid": . medsem, indep(math) med(read) dep(science) stand mcreps(5000) zlc rit rid}{p_end}
 
-{phang}{stata "use http://www.stata-press.com/data/r14/sem_sm2.dta, clear": . use http://www.stata-press.com/data/r14/sem_sm2.dta, clear}{p_end}
-{phang}{stata . qui sem (Alien67->anomia67 pwless67)(Alien71->anomia71 pwless71)(SES->educ66 occstat66)(Alien67<-SES)(Alien71<-Alien67 SES)}{p_end}
-{phang}{stata "medsem, indep(SES) med(Alien67) dep(Alien71) stand mcreps(5000) zlc rit rid": . medsem, indep(SES) med(Alien67) dep(Alien71) stand mcreps(5000) zlc rit rid}{p_end}
-
-{phang}{stata "use http://www.stata-press.com/data/r14/sem_sm2.dta, clear": . use http://www.stata-press.com/data/r14/sem_sm2.dta, clear}{p_end}
-{phang}{stata . qui sem (F1->educ66 occstat66)(F2->anomia66 pwless66)(F3->anomia67 pwless67)(F4->anomia71 pwless71)(F2 F3<-F1)(F4<-F1 F2 F3)}{p_end}
-{phang}{stata "medsem, indep(F1) med(F2) dep(F4) ": . medsem, indep(F1) med(F2) dep(F4) }{p_end}
-{phang}{stata "medsem, indep(F1) med(F3) dep(F4) zlc": . medsem, indep(F1) med(F3) dep(F4) zlc}{p_end}
-
-{phang}{stata "use http://www.stata-press.com/data/r14/sem_sm2.dta, clear": . use http://www.stata-press.com/data/r14/sem_sm2.dta, clear}{p_end}
-{phang}{stata . qui sem (F1->educ66 occstat66)(F2->anomia66 pwless66)(F3->anomia67 pwless67)(F2<-F1)(F3<-F1 F2)}{p_end}
-{phang}{stata "medsem, indep(F1) med(F2) dep(F3) stand rit": . medsem, indep(F1) med(F2) dep(F3) stand rit}{p_end}
-
+{phang}{stata "webuse set https://github.com/mmoglu/medsem/raw/main": . webuse set https://github.com/mmoglu/medsem/raw/main}{p_end}
+{phang}{stata "webuse "PoliticalDemocracy.dta", clear": . webuse "PoliticalDemocracy.dta", clear}{p_end}
+{phang}{stata . qui sem (Ind60 -> x1-x3)(Dem60 -> y1-y4)(Dem65 -> y5-y8)(Dem60<-Ind60)(Dem65<-Dem60 Ind60)}{p_end}
+{phang}{stata ". medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid": . . medsem, indep(Ind60) med(Dem60) dep(Dem65) stand mcreps(5000) zlc rit rid}{p_end}
 
 {title:Author}
 Mehmet Mehmetoglu
